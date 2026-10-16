@@ -13,11 +13,11 @@ HTML_TEMPLATE = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insurance Cost Predictor</title>
+    <title>Home-Value-Prediction</title>
     <style>
         :root {
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
             --bg: #f8fafc;
             --card-bg: #ffffff;
             --text: #1e293b;
@@ -70,7 +70,7 @@ HTML_TEMPLATE = """
         input:focus, select:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
         }
         button {
             width: 100%;
@@ -91,18 +91,18 @@ HTML_TEMPLATE = """
         .result {
             margin-top: 24px;
             padding: 16px;
-            background-color: #e0e7ff;
+            background-color: #dbeafe;
             border-radius: 8px;
             text-align: center;
             font-size: 18px;
             font-weight: 600;
-            color: #312e81;
+            color: #1e40af;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Medical Cost Predictor</h2>
+        <h2>Home-Value-Prediction</h2>
         <form method="POST">
             <div class="form-group">
                 <label for="age">Age</label>
@@ -139,11 +139,11 @@ HTML_TEMPLATE = """
                     <option value="3">Southwest</option>
                 </select>
             </div>
-            <button type="submit">Predict Cost</button>
+            <button type="submit">Predict Value</button>
         </form>
         {% if prediction is not none %}
         <div class="result">
-            Estimated Cost: {{ prediction }}
+            Predicted Value: {{ prediction }}
         </div>
         {% endif %}
     </div>
